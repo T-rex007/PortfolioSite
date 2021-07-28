@@ -5,6 +5,7 @@
         background-color: red;
         position: relative;
         top: 70px;
+        scroll-behavior: smooth;
         scroll-snap-type: y mandatory;
         scrollbar-width: 0;
         &::-webkit-scrollbar{

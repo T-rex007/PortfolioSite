@@ -3,8 +3,7 @@ import "./contact.scss"
 
 function Contact() {
     return (
-        <div className="contact">
-            sfsdf
+        <div className="contact" id="contacts">
         </div>
     )
 }
