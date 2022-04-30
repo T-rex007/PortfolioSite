@@ -1,16 +1,25 @@
+// @import compass
 .intro {
   background-color: aquamarine;
   display: flex;
   .left {
     flex: 0.5;
     background-color: white;
+    .initials {
+      color: purple;
+      font-size: 400px;
+      background: -webkit-linear-gradient(white, #38495a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
     .imgContainer {
       width: 700px;
       height: 700px;
       background-color: black;
       border-radius: 50%;
       display: flex;
-      align-items: flex-end;
+      // align-items: flex-end;
+      align-items: center; //
       justify-content: center;
       float: right;
       img {
@@ -48,12 +57,12 @@
         }
 
         @keyframes blink {
-            50%{
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-            }
+          50% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
         }
       }
     }

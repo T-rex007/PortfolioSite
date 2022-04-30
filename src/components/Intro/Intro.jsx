@@ -11,7 +11,7 @@ function Intro() {
           showCursor: false,
           backDelay: 1500,
           backSpeed: 60,
-          strings: ["Developer", "Electrical and Computer Engineering Student", "Freelancer"],
+          strings: ["Machine Learning Developer","Electrical and Computer Engineer","Freelancer", "Entrepreneur"],
         });
 
     },[])
@@ -19,7 +19,8 @@ function Intro() {
     <div className="intro" id="intro">
       <div className="left">
         <div className="imgContainer">
-          <img src="assets/man.png" alt="" />
+          {/* <img src="assets\IMG_20190309_173250.png" alt="" /> */}
+          <span className="initials">TC</span>
         </div>
       </div>
       <div className="right">
@@ -27,7 +28,7 @@ function Intro() {
           <h2>Hi there, I'm</h2>
           <h1>Tyrel Cadogan</h1>
           <h3>
-              <span ref={textRef}></span>
+            <span ref={textRef}></span>
           </h3>
         </div>
         <a href="#portfolio">
