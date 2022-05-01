@@ -1,7 +1,13 @@
 import React, {useEffect,useState} from "react";
 import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss";
-import { contentPortfolio, designPortfolio, mobilePortfolio, webPortfolio, featuredPortfolio } from "../../data";
+import {
+  roboticsPortfolio,
+  // designPortfolio,
+  cvPortfolio,
+  webPortfolio,
+  featuredPortfolio,
+} from "../../data";
 export default function Portfolio() {
   const [selected, setSelected] = useState("featured");
   const [data, setData] = useState([])
@@ -19,10 +25,6 @@ export default function Portfolio() {
       title: "Web Automation",
     },
     {
-      id: "iot",
-      title: "IoT",
-    },
-    {
       id: "robot",
       title: "Robotics",
     },
@@ -36,13 +38,10 @@ export default function Portfolio() {
         setData(webPortfolio);
         break;
       case"CV":
-        setData(mobilePortfolio);
-        break;
-      case"iot":
-        setData(designPortfolio);
+        setData(cvPortfolio);
         break;
       case"robot":
-        setData(contentPortfolio);
+        setData(roboticsPortfolio);
         break;
       default:
         setData(featuredPortfolio);
@@ -54,19 +53,24 @@ export default function Portfolio() {
       <h1>Portfolio</h1>
       <ul>
         {list.map((item) => (
-          <PortfolioList 
-          title={item.title}
-          active={selected === item.id}
-          setSelected={setSelected}
-          id={item.id}
-        />
+          <PortfolioList
+            title={item.title}
+            active={selected === item.id}
+            setSelected={setSelected}
+            id={item.id}
+          />
         ))}
       </ul>
       <div className="container">
-        {data.map((d) =>(<div className="item">
-          <img src={d.img} alt="" />
-          <h3>{d.title}</h3>
-        </div>))}
+        {data.map((d) => (
+          <a href ={d.link}> 
+          <div className="item">
+              <img src={d.img} alt="" />
+              <h3>{d.title}</h3>
+          </div>
+          </a> 
+
+        ))}
       </div>
     </div>
   );

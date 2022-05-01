@@ -1,31 +1,36 @@
 import "./testimonials.scss";
+import avatar1 from "../../assets/avataaars (1).png";
+import avatar2 from "../../assets/avataaars (2).png";
+import avatar3 from "../../assets/avataaars (3).png";
+import upwork_img from "../../assets/upwork.png";
+
 
 export default function Testimonials() {
   const data = [
     {
       id: 1,
       name: "Tom Durden",
-      title: "Senior Developer",
-      img: "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      icon: "assets/twitter.png",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem.",
+      title: "Upwork Client",
+      img: avatar1,
+      icon: upwork_img,
+      desc: "He is skilled and always ready to work",
     },
     {
       id: 2,
       name: "Alex Kalinski",
-      title: "Co-Founder of DELKA",
-      img: "https://images.pexels.com/photos/428321/pexels-photo-428321.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      icon: "assets/youtube.png",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem recusandae perspiciatis ducimus vel hic temporibus. ",
+      title: "Upwork Client",
+      img: avatar2,
+      icon: upwork_img,
+      desc: "Tyrel is diligent and enthusiastic about developing software in this area of work!",
       featured: true,
     },
     {
       id: 3,
       name: "Martin Harold",
-      title: "CEO of ALBI",
-      img: "https://images.pexels.com/photos/3863793/pexels-photo-3863793.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      icon: "assets/linkedin.png",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magnam dolorem",
+      title: "Upwork Client",
+      img: avatar3,
+      icon: upwork_img,
+      desc: "Great work Tyrel. Thank you for completing the A.I. writing project.",
     },
   ];
   return (
@@ -37,7 +42,9 @@ export default function Testimonials() {
             <div className="top">
               <img src="assets/right-arrow.png" className="left" alt="" />
               <img className="user" src={d.img} alt="" />
-              <img className="right" src={d.icon} alt="" />
+              <a href="https://www.upwork.com/freelancers/~01c7e04a899e99282b">
+                <img className="right" src={d.icon} alt="" />
+              </a>
             </div>
             <div className="center">{d.desc}</div>
             <div className="bottom">

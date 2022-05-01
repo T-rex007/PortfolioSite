@@ -2,13 +2,14 @@ import React from "react";
 import "./topbar.scss";
 import {Person,Mail} from "@material-ui/icons"
 
+
 export default function Topbar({menuOpen, setMenuOpen}) {
   return (
     <div className={"topbar " + (menuOpen && "active")}>
       <div className="wrapper">
         <div className="left">
           <a href="#intro" className="logo">
-            Tyrel Cadogan.
+            Tyrel.
           </a>
           <div className="itemContainer">
             <Person className="icon" />
